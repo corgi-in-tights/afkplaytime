@@ -16,6 +16,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import static java.lang.Math.floor;
+
 
 @Mixin(ServerPlayerEntity.class)
 public abstract class ServerPlayerEntityMixin extends PlayerEntity {
@@ -45,7 +47,7 @@ public abstract class ServerPlayerEntityMixin extends PlayerEntity {
         var p = PlayerDataManager.getInstance().getByUuid(this.getUuid());
         if (p != null && !p.isAfk()) {
             this.setPlaytime(new_pt);
-            this.updateScores(PlaytimePerms.PLAYTIME, new_pt);
+            this.updateScores(PlaytimePerms.PLAYTIME, (int) floor((new_pt/20.0)/60.0));
         }
     }
 
