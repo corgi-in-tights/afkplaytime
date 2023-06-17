@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "playtimeperms",
+	"version": "${version}",
+	"name": "Playtime Perms",
+	"description": "Adds a new scoreboard criteria (playtimeperms:playtime) that keeps a track of playtime discounting being AFK.",
+	"authors": [
+		"hiscorginess"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/corgi-in-tights/playtime-perms"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/playtimeperms/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.reyaan.PlaytimePerms"
+		]
+	},
+	"mixins": [
+		"playtimeperms.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.10",
+		"minecraft": "1.19.x",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-permissions-api-v0": "*",
+		"essential_commands": "*"
+	}
+}
