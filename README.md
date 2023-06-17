@@ -2,6 +2,8 @@
 
 Adds a playtime scoreboard criteria (that accounts for players being AFK in Essential Commands)
 
+Downloads are in the releases section
+
 ## Usage:
 1. Create a new scoreboard: `scoreboard objectives create playtime playtimeperms:playtime`
 2. Enjoy.
