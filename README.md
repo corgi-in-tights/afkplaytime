@@ -22,7 +22,7 @@ Eg. Give a new role and tell them good job once they reach a certain point.
 ### Datapacks:
 mynamespace:tick.mcfunction
 ```
-`execute as @a if score @s playtime matches 5 run function mynamespace:myfunc
+execute as @a if score @s playtime matches 5 run function mynamespace:myfunc
 ```
 
 mynamespace:myfunc.mcfunction
